@@ -1,7 +1,7 @@
-#use model LogisticRegression to get line divide breast-cancer-NegativeOrPositive
+#
 #
 
-'learn tools'
+'learn tools and use model LogisticRegression to get line divide breast-cancer-NegativeOrPositive'
 
 __author__ = 'hjkruclion'
 
