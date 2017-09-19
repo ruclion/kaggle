@@ -11,7 +11,9 @@ from sklearn.cross_validation import train_test_split
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression
 from sklearn.linear_model import SGDClassifier
+from sklearn.svm import LinearSVC
 from sklearn.metrics import classification_report
+
 
 #read data
 col_names = list(map(str, np.arange(1, 12)))
@@ -41,8 +43,14 @@ sgdc = SGDClassifier()
 sgdc.fit(x_train, y_train)
 sgdc_y_predict = sgdc.predict(x_test)
 
+#LinerSVC
+lsvc = LinearSVC()
+lsvc.fit(x_train, y_train)
+lsvc_y_predict = lsvc.predict(x_test)
+
 print(lr_y_predict, sgdc_y_predict)
 
 #report
 print(classification_report(y_test, lr_y_predict))
 print(classification_report(y_test, sgdc_y_predict))
+print(classification_report(y_test, lsvc_y_predict))
